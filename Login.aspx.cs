@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,17 +18,44 @@ namespace Baberia
         protected void ButtonIniciarSesion_Click(object sender, EventArgs e)
         {
             Conexion ob = new Conexion();
+            MySqlDataReader reader = null;
             try
             {
                 ob.conectar();
-                Response.Write("<script>alert('Se accedio a la base de datos');</script>");
+                try
+                {
+                    String a = TextBoxCorreo.Text;
+                    String b = TextBoxPassword.Text;
+                    MySqlCommand cmd = new MySqlCommand("select Correo,password from usuario;", ob.conectar());
+                    
+
+                    reader = cmd.ExecuteReader();
+                    String correo = "";
+                    String clave = "";
+                    while (reader.Read())
+                    {
+                        correo = reader.GetString(0) + "\n ";
+                        clave = reader.GetString(1) + "\n";
+                    }
+                }catch(Exception eo)
+                {
+                    Response.Write("<script>alert('No se realizó la consulta con éxito a la base de datos error:" + eo.Message + "');</script>");
+                }
+                
+
+               
             }catch(Exception eo)
             {
-                Response.Write("<script>alert('No se pudo nea');</script>"+ eo.Message);
+                Response.Write("<script>alert('No se accedió a la base de datos error:" + eo.Message+"');</script>");
             }
-           
-          
-            
+            finally
+            {
+                reader.Close();
+                ob.Cerrar();
+            }
+
+
+
         }
     }
 }

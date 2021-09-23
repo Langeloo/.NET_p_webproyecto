@@ -4,30 +4,26 @@ using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Linq;
 using System.Web;
+using MySql.Data.MySqlClient;
 
 namespace Baberia
 {
     public class Conexion
     {
-        public SqlConnection em;
+        public MySqlConnection em;
 
         public Conexion()
         {
         }
 
-        public SqlConnection conectar()
+        public MySqlConnection conectar()
         {
             
-                em = new SqlConnection("server=localhost;user id=root;database=barberia");
+                em = new MySqlConnection("server=localhost;port=3306;user id=root;password=;database=barberia");
                 em.Open();
                 return em;
         }
            
-                
-
-               
- 
-        
         public void Cerrar()
         {
             em.Close();

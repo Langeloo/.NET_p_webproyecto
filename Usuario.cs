@@ -13,9 +13,10 @@ namespace Baberia
         private String nombre2;
         private String apellido1;
         private String apellido2;
+        private String Rol;
         private int edad;
 
-        public Usuario(string correo, string password, string nombre1, string nombre2, string apellido1, string apellido2, int edad)
+        public Usuario(string correo, string password, string nombre1, string nombre2, string apellido1, string apellido2,string rol ,int edad)
         {
             this.correo = correo;
             this.password = password;
@@ -23,6 +24,7 @@ namespace Baberia
             this.nombre2 = nombre2;
             this.apellido1 = apellido1;
             this.apellido2 = apellido2;
+            this.Rol = rol;
             this.edad = edad;
         }
         public String getCorreo()
@@ -30,11 +32,19 @@ namespace Baberia
             return correo;
         }
 
+        public void setRol(String correo)
+        {
+            this.Rol = correo;
+        }
+        public String getRol()
+        {
+            return this.Rol;
+        }
+
         public void setCorreo(String correo)
         {
             this.correo = correo;
         }
-
         public String getPassword()
         {
             return password;
