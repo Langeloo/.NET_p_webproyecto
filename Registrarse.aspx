@@ -57,7 +57,7 @@
           </div>
           <div class="form-outline mb-3">
                <asp:TextBox ID="TextBoxNom2" runat="server" class="form-control form-control-lg"
-              placeholder="Ingrese su segundo Nombre" required="true"></asp:TextBox>
+              placeholder="Ingrese su segundo Nombre"></asp:TextBox>
               <label class="form-label" for="form3Example4">Segundo Nombre</label>
 
           </div>

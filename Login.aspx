@@ -11,7 +11,7 @@
 
 
 <section class="vh-100">
-  <div class="container-fluid h-custom">
+  <div class="container-fluid">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
         <img src="/uploads/barber_service_02.jpg" class="img-fluid"
@@ -58,7 +58,11 @@
     </div>
   </div>
 
-
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <!-- Right -->
    
 </section>

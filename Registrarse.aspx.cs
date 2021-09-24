@@ -21,7 +21,14 @@ namespace Baberia
             ob.setCorreo(TextRBoxCorreo.Text);
             ob.setPassword(TextBoxRPassword.Text);
             ob.setNombre1(TextBoxNom1.Text);
-            ob.setNombre2(TextBoxNom2.Text);
+            if(TextBoxNom2.Text==null || TextBoxNom2.Text == "")
+            {
+                ob.setNombre2("");
+            }
+            {
+                ob.setNombre2(TextBoxNom2.Text);
+            }
+            
             ob.setApellido1(TextBoxApellido1.Text);
             ob.setApellido2(TextBoxApellido2.Text);
             ob.setRol(DropDownListRol.SelectedValue.ToString());
