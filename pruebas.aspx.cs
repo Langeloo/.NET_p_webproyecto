@@ -30,10 +30,20 @@ namespace Baberia
                         "'" + ob.getRol() + "'," +
                          + ob.getEdad() + ");" + uwu;*/
 
-            List<Usuario> lista = ini.listaDeUsuarios();
-            foreach(Usuario a in lista)
+            /*List<Usuario> lista = ini.listaDeUsuarios();
+            foreach(Usuario u in lista)
+
             {
-                TextBox1.Text += a.getNombre1() + "\n";
+                TextBox1.Text += u.getNombre1() + " ";
+            }*/
+
+            if(ini.ComprobarExistencia("CRISTIANVinasco@hotmail.com"))
+            {
+                TextBox1.Text = "El usuario si esixte";
+            }
+            else
+            {
+                TextBox1.Text = "El usuario NO esixte";
             }
         }
     }

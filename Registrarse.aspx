@@ -20,12 +20,14 @@
 <body>
     <form id="form1" runat="server">
  <section class="vh-100">
-  <div class="container-fluid h-custom">
+     <br />
+  <div class="container-fluid">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
         <img src="/uploads/barber_service_06.jpg" class="img-fluid"
           alt="Sample image"/>
       </div>
+     
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
           <h2 class="display-4">REGISTRATE EN NUESTRA WEB</h2>
           <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">

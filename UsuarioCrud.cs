@@ -9,6 +9,10 @@ namespace Baberia
     
     public class UsuarioCrud
     {
+        public UsuarioCrud()
+        {
+        }
+
         public Boolean InsertarUsuario(Usuario ob)
         {
             Conexion con = new Conexion();
@@ -44,7 +48,7 @@ namespace Baberia
 
         public List<Usuario> listaDeUsuarios()
         {
-            Usuario ob = new Usuario();
+            
             List<Usuario> lista = new List<Usuario>();
             Conexion con = new Conexion();
             MySqlDataReader reader = null;
@@ -56,10 +60,12 @@ namespace Baberia
                 MySqlCommand cmd = new MySqlCommand(sql, con.conectar());
                 reader = cmd.ExecuteReader();
                 Usuario resultado = new Usuario();
-                if (reader.HasRows)
+               if (reader.HasRows)
                 {
+                    lista.Clear();
                     while (reader.Read())
                     {
+                        Usuario ob = new Usuario();
                         ob.setCorreo(reader.GetString(0));
                         ob.setPassword(reader.GetString(1));
                         ob.setNombre1(reader.GetString(2));
@@ -136,5 +142,30 @@ namespace Baberia
                     reader.Close();
             }
         }
+
+
+        public bool ComprobarExistencia(String id)
+        {
+            List<Usuario> lista = this.listaDeUsuarios();
+            if (lista!=null)
+            {
+                foreach(Usuario a in lista)
+                {
+                    if (a.getCorreo().ToLower().Equals(id.ToLower()))
+                    {
+                        return true;
+                        break;
+                    }
+                }
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
+
+   
 }
