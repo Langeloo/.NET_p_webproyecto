@@ -13,27 +13,26 @@ namespace Baberia
         {
             Conexion con = new Conexion();
             MySqlDataReader reader = null;
-            String sql = "INSERT INTO USUARIO (correo, password,nombre1,nombre2,apellido1,apellido2,rol,edad) " +
-                "VALUES('"+ob.getCorreo()+"'," +
+            String sql = "INSERT INTO USUARIO (correo,password,nombre1,nombre2,apellido1,apellido2,rol,edad) " +
+                "VALUES ('"+ob.getCorreo()+"'," +
                         "'"+ob.getPassword()+"'," +
                         "'"+ob.getNombre1()+"'," +
                         "'"+ob.getNombre2()+"'," +
-                        "'"+ob.getApellido1()+"'"+ 
+                        "'"+ob.getApellido1()+"',"+ 
                         "'"+ob.getApellido2()+ "'," +
                         "'"+ob.getRol()+"'," +
-                        "'"+ob.getEdad() + "');";
+                        +ob.getEdad() + ");";
 
             try
             {
                 con.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql , con.conectar());
                 cmd.ExecuteNonQuery();
-
-
-
+                return true;
             }
-            catch
+            catch (MySqlException oe)
             {
+                Console.WriteLine("Error en el insertar datos" + oe);
                 return false;
             }finally
             {
@@ -41,10 +40,101 @@ namespace Baberia
                 if(reader!=null)
                 reader.Close();
             }
+        }
 
+        public List<Usuario> listaDeUsuarios()
+        {
+            Usuario ob = new Usuario();
+            List<Usuario> lista = new List<Usuario>();
+            Conexion con = new Conexion();
+            MySqlDataReader reader = null;
+            String sql = "SELECT * FROM USUARIO;";
 
+            try
+            {
+                con.conectar();
+                MySqlCommand cmd = new MySqlCommand(sql, con.conectar());
+                reader = cmd.ExecuteReader();
+                Usuario resultado = new Usuario();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ob.setCorreo(reader.GetString(0));
+                        ob.setPassword(reader.GetString(1));
+                        ob.setNombre1(reader.GetString(2));
+                        ob.setNombre2(reader.GetString(3));
+                        ob.setApellido1(reader.GetString(4));
+                        ob.setApellido2(reader.GetString(5));
+                        ob.setRol(reader.GetString(6));
+                        ob.setEdad(reader.GetInt32(7));
+                        lista.Add(ob);
+                    }
 
-            return true;
+                    return lista;
+                }
+                else
+                {
+                    return null;
+                }
+
+            }
+            catch (MySqlException oe)
+            {
+                Console.WriteLine("Error en la lista de los usuarios" + oe);
+                return null;
+            }
+            finally
+            {
+                con.Cerrar();
+                if (reader != null)
+                    reader.Close();
+            }
+        }
+
+        public Usuario BuscarUsuario(Usuario ob)
+        {
+            Conexion con = new Conexion();
+            MySqlDataReader reader = null;
+            String sql = "SELECT * FROM USUARIO WHERE CORREO = '"+ob.getCorreo()+"'";
+
+            try
+            {
+                con.conectar();
+                MySqlCommand cmd = new MySqlCommand(sql, con.conectar());
+                reader = cmd.ExecuteReader();
+                Usuario resultado = new Usuario();
+                if(reader.HasRows)
+                {
+                    while(reader.Read())
+                    {
+                        ob.setCorreo(reader.GetString(0));
+                        ob.setPassword(reader.GetString(1));
+                        ob.setNombre1(reader.GetString(2));
+                        ob.setNombre2(reader.GetString(3));
+                        ob.setApellido1(reader.GetString(4));
+                        ob.setApellido2(reader.GetString(5));
+                        ob.setRol(reader.GetString(6));
+                        ob.setEdad(reader.GetInt32(7)); 
+                    }
+                    return resultado;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch(MySqlException oe)
+            {
+                Console.WriteLine("Error en el buscar usuario"+ oe);
+                return null;
+            }
+            finally
+            {
+                con.Cerrar();
+                if (reader != null)
+                    reader.Close();
+            }
         }
     }
 }

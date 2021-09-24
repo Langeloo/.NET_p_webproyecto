@@ -27,6 +27,11 @@ namespace Baberia
             this.Rol = rol;
             this.edad = edad;
         }
+
+        public Usuario()
+        {
+        }
+
         public String getCorreo()
         {
             return correo;
@@ -47,7 +52,7 @@ namespace Baberia
         }
         public String getPassword()
         {
-            return password;
+            return this.password;
         }
 
         public void setPassword(String password)

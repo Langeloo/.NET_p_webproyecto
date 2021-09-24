@@ -44,22 +44,15 @@
           <div class="d-flex justify-content-between align-items-center">
             <!-- Checkbox -->
             <div class="form-check mb-0">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-              <label class="form-check-label" for="form2Example3">
-                ¿Recordarme?
-              <a href="#" class="link-danger" style="text-align-center">¿No recuerda su cuenta?</a>
-              </label>
+              <a href="Registrarse.aspx" class="link-danger">¿No tiene cuenta? Registrese aquí</a>
             </div>
               &nbsp;</div>
             <!-- Boton entrar -->
-          <div class="text-center text-lg-start mt-4 pt-2">
+          <div class="text-lg-start mt-4 pt-2">
 
               <asp:Button ID="ButtonIniciarSesion" runat="server" Text="Ingresar" class="btn btn-danger btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem;" OnClick="ButtonIniciarSesion_Click"/>
 
-            <!-- Registrarse -->
-            <p class="small fw-bold mt-2 pt-1 mb-0">¿No tiene una cuenta? <a href="#!"
-                class="link-danger">Registrese aquí!!!!</a></p>
           </div>
       </div>
     </div>
@@ -67,21 +60,7 @@
 
 
     <!-- Right -->
-    <div>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="#!" class="text-white">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </div>
-    <!-- Right -->
+   
 </section>
 
  </div>
