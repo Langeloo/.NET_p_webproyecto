@@ -98,22 +98,23 @@ namespace Baberia
             }
         }
 
-        public Usuario BuscarUsuario(Usuario ob)
+        public Usuario BuscarUsuario(Usuario id)
         {
             Conexion con = new Conexion();
             MySqlDataReader reader = null;
-            String sql = "SELECT * FROM USUARIO WHERE CORREO = '"+ob.getCorreo()+"'";
-
+            String sql = "SELECT * FROM USUARIO WHERE CORREO = '"+ id.getCorreo()+ "';";
+            Usuario ob = null;
             try
             {
                 con.conectar();
+                
                 MySqlCommand cmd = new MySqlCommand(sql, con.conectar());
                 reader = cmd.ExecuteReader();
-                Usuario resultado = new Usuario();
-                if(reader.HasRows)
-                {
-                    while(reader.Read())
+                
+                    ob = new Usuario();
+                    while (reader.Read())
                     {
+                        
                         ob.setCorreo(reader.GetString(0));
                         ob.setPassword(reader.GetString(1));
                         ob.setNombre1(reader.GetString(2));
@@ -121,19 +122,14 @@ namespace Baberia
                         ob.setApellido1(reader.GetString(4));
                         ob.setApellido2(reader.GetString(5));
                         ob.setRol(reader.GetString(6));
-                        ob.setEdad(reader.GetInt32(7)); 
+                        ob.setEdad(reader.GetInt32(7));
                     }
-                    return resultado;
-                }
-                else
-                {
-                    return null;
-                }
+                return ob;
             }
             catch(MySqlException oe)
             {
                 Console.WriteLine("Error en el buscar usuario"+ oe);
-                return null;
+                return ob;
             }
             finally
             {
@@ -155,6 +151,39 @@ namespace Baberia
                     {
                         return true;
                         break;
+                    }
+                }
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool ComprobarUsuario(Usuario ob)
+        {
+            List<Usuario> lista = this.listaDeUsuarios();
+            if (lista != null)
+            {
+                foreach (Usuario a in lista)
+                {
+                    if (ComprobarExistencia(ob.getCorreo()))
+                    {
+
+                        if (a.getCorreo().ToLower().Equals(a.getCorreo().ToLower()))
+                        {
+                            if (a.getPassword().Equals(ob.getPassword()))
+                            {
+                                return true;
+                                break;
+                            }
+                            else
+                            {
+                                return false;
+                                break;
+                            }
+                        }                       
                     }
                 }
                 return false;

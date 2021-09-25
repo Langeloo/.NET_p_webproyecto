@@ -18,7 +18,6 @@ namespace Baberia
 
         public MySqlConnection conectar()
         {
-            
                 em = new MySqlConnection("server=localhost;port=3306;user id=root;password=;database=barberia");
                 em.Open();
                 return em;

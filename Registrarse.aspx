@@ -82,7 +82,7 @@
                   <label class="form-label" for="form3Example4">Rol</label>
                       <div class="form-outline mb-3">
                           <div class="btn-group mb-3">
-                           <asp:DropDownList ID="DropDownListRol" runat="server" AutoPostBack="True" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                           <asp:DropDownList ID="DropDownListRol" runat="server" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" OnSelectedIndexChanged="DropDownListRol_SelectedIndexChanged">
                               <asp:ListItem >Usuario</asp:ListItem>
                               <asp:ListItem>Barbero</asp:ListItem>
                           </asp:DropDownList>

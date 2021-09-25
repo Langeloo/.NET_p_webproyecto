@@ -17,45 +17,34 @@ namespace Baberia
 
         protected void ButtonIniciarSesion_Click(object sender, EventArgs e)
         {
-            Conexion ob = new Conexion();
-            MySqlDataReader reader = null;
-            try
+            UsuarioCrud buscar = new UsuarioCrud();
+            if (buscar.ComprobarExistencia(TextBoxCorreo.Text) || TextBoxCorreo.Text.Contains("."))
             {
-                ob.conectar();
-                try
-                {
-                    String a = TextBoxCorreo.Text;
-                    String b = TextBoxPassword.Text;
-                    MySqlCommand cmd = new MySqlCommand("select Correo,password from usuario;", ob.conectar());
-                    
+                Usuario objeto = new Usuario(TextBoxCorreo.Text,TextBoxPassword.Text,"","","","","",0);
 
-                    reader = cmd.ExecuteReader();
-                    String correo = "";
-                    String clave = "";
-                    while (reader.Read())
-                    {
-                        correo = reader.GetString(0) + "\n ";
-                        clave = reader.GetString(1) + "\n";
-                    }
-                }catch(Exception eo)
+                if(buscar.ComprobarUsuario(objeto))
                 {
-                    Response.Write("<script>alert('No se realizó la consulta con éxito a la base de datos error:" + eo.Message + "');</script>");
+                    Response.Write("<script>alert('BIENVENIDO A ELEGANCE BARBERSHOP');</script>");
+
+
                 }
+                else
+                {
+                    TextBoxPassword.Text ="";
+                    TextBoxPassword.Focus();
+                    Response.Write("<script>alert('Contraseña incorrecta, por favor vuelva a intentar');</script>");
+                }
+
                 
-
-               
-            }catch(Exception eo)
-            {
-                Response.Write("<script>alert('No se accedió a la base de datos error:" + eo.Message+"');</script>");
             }
-            finally
+            else
             {
-                reader.Close();
-                ob.Cerrar();
+                Response.Write("<script>alert('El correo no está registrado, por favor vuelva a intentar');</script>");
+                TextBoxCorreo.Text = "";
+                TextBoxPassword.Text = "";
+                TextBoxCorreo.Focus();
             }
-
-
-
+                            
         }
     }
 }
