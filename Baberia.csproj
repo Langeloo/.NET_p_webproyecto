@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AcercaDeNosotros.aspx" />
+    <Content Include="administracion.aspx" />
     <Content Include="cerrar.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Login.aspx" />
@@ -81,6 +82,13 @@
     </Compile>
     <Compile Include="AcercaDeNosotros.aspx.designer.cs">
       <DependentUpon>AcercaDeNosotros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="administracion.aspx.cs">
+      <DependentUpon>administracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administracion.aspx.designer.cs">
+      <DependentUpon>administracion.aspx</DependentUpon>
     </Compile>
     <Compile Include="cerrar.aspx.cs">
       <DependentUpon>cerrar.aspx</DependentUpon>

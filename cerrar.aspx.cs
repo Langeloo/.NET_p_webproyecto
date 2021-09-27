@@ -14,7 +14,7 @@ namespace Baberia
             Index.activesesion = false;
             Response.Write("<script>Alert('TE ESPERAMOS PRONTO!!');</script>");
             //MessageBox.Show("Data inserted successfully");
-            System.Threading.Thread.Sleep(3000);
+            //System.Threading.Thread.Sleep(3000);
             Response.Redirect("Inicio.aspx");
         }
     }
