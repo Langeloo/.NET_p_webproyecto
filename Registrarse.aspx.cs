@@ -42,7 +42,7 @@ namespace Baberia
                 {
                     insertar.InsertarUsuario(ob);
                     Response.Write("<script>alert('Datos Registrados con éxito');</script>");
-                    Response.Redirect("Inicio.aspx");
+                    Response.Redirect("Login.aspx");
                 }
                 else
                 {

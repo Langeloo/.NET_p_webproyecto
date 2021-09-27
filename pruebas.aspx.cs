@@ -17,7 +17,7 @@ namespace Baberia
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Usuario ob = new Usuario("Administrador@gmAIl.com", "12345678", "David", "Santiago", "Lopez", "Diaz", "Barbero", 32);
+            Usuario ob = new Usuario("Administraaaador@gmAIl.com", "12345678", "CARLOOOOOSSSS", "Santiago", "Lopez", "Diaz", "Barbero", 32);
             UsuarioCrud ini = new UsuarioCrud();
             //bool uwu = ini.InsertarUsuario(ob);
             /*TextBox1.Text += "INSERT INTO USUARIO (correo,password,nombre1,nombre2,apellido1,apellido2,rol,edad) " +
@@ -30,11 +30,20 @@ namespace Baberia
                         "'" + ob.getRol() + "'," +
                          + ob.getEdad() + ");" + uwu;*/
 
-            /*List<Usuario> lista = ini.listaDeUsuarios();
-            foreach(Usuario u in lista)
+            if(ini.delete(ob))
             {
-                TextBox1.Text += u.getCorreo() + " " + u.getPassword() + "\n";
-            }*/
+                List<Usuario> lista = ini.listaDeUsuarios();
+                foreach (Usuario u in lista)
+                {
+                    TextBox1.Text += u.getNombre1()+ "\n";
+                }
+            }
+            else
+            {
+                TextBox1.Text += "NO SE HIZO NI MIERDA ERROR";
+            }
+
+            
 
             /* if(ini.ComprobarExistencia("CRISTIANVinasco@hotmail.com"))
              {
@@ -75,7 +84,7 @@ namespace Baberia
                   TextBox1.Text += "Acceso NOOOOOOOOOOOOOOOO";
               }*/
 
-            if(ini.BuscarUsuario(ob)!=null)
+            /*if(ini.BuscarUsuario(ob)!=null)
             {
                 Usuario ob2 = ini.BuscarUsuario(ob);
 
@@ -84,7 +93,7 @@ namespace Baberia
             else
             {
                 TextBox1.Text = "El usuario buscado no está en la base de datos";
-            }
+            }*/
           
         }
     }

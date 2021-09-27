@@ -45,6 +45,59 @@ namespace Baberia
                 reader.Close();
             }
         }
+        public Boolean delete(Usuario ob)
+        {
+            Conexion con = new Conexion();
+            MySqlDataReader reader = null;
+            String sql = "DELETE FROM USUARIO WHERE CORREO='" + ob.getCorreo() + "';";
+
+            try
+            {
+                con.conectar();
+                MySqlCommand cmd = new MySqlCommand(sql, con.conectar());
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (MySqlException oe)
+            {
+                Console.WriteLine("Error en BORRAR datos" + oe);
+                return false;
+            }
+            finally
+            {
+                con.Cerrar();
+                if (reader != null)
+                    reader.Close();
+            }
+        }
+
+        public Boolean Update(String id,Usuario ob)
+        {
+            Conexion con = new Conexion();
+            MySqlDataReader reader = null;
+            String sql = "UPDATE USUARIO SET correo ='" + ob.getCorreo() + "',password='" + ob.getPassword() + "',nombre1='" + ob.getNombre1()
+                                                + "',nombre2='" + ob.getNombre2() + "',apellido1='" + ob.getApellido1() + "',apellido2='" + ob.getApellido2() + "',rol='" + ob.getRol() + "',edad='" + ob.getEdad() + "'" +
+                                                "WHERE CORREO='" + id + "';";
+
+            try
+            {
+                con.conectar();
+                MySqlCommand cmd = new MySqlCommand(sql, con.conectar());
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (MySqlException oe)
+            {
+                Console.WriteLine("Error en el insertar datos" + oe);
+                return false;
+            }
+            finally
+            {
+                con.Cerrar();
+                if (reader != null)
+                    reader.Close();
+            }
+        }
 
         public List<Usuario> listaDeUsuarios()
         {
@@ -138,7 +191,6 @@ namespace Baberia
                     reader.Close();
             }
         }
-
 
         public bool ComprobarExistencia(String id)
         {

@@ -12,7 +12,7 @@ namespace Baberia
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Index.enlogin = true;
         }
 
         protected void ButtonIniciarSesion_Click(object sender, EventArgs e)
@@ -22,11 +22,30 @@ namespace Baberia
             {
                 Usuario objeto = new Usuario(TextBoxCorreo.Text,TextBoxPassword.Text,"","","","","",0);
 
-                if(buscar.ComprobarUsuario(objeto))
+                if (buscar.ComprobarUsuario(objeto))
                 {
+                    Index.estadosesion = true;
+
+
                     Response.Write("<script>alert('BIENVENIDO A ELEGANCE BARBERSHOP');</script>");
 
+                    Usuario ob = buscar.BuscarUsuario(objeto);
+                    if (ob.getRol().Equals("Barbero"))
+                    {
+                        Index.roLin = 'b';
+                    }else if(ob.getRol().Equals("Usuario"))
+                    {
+                        Index.roLin = 'u';
+                    }
+                    else if(ob.getRol().Equals("Administrador"))
+                    {
+                        Index.roLin = 'a';
+                    }
 
+
+                    Response.Redirect("Inicio.aspx");
+
+                    
                 }
                 else
                 {
@@ -34,8 +53,6 @@ namespace Baberia
                     TextBoxPassword.Focus();
                     Response.Write("<script>alert('Contraseña incorrecta, por favor vuelva a intentar');</script>");
                 }
-
-                
             }
             else
             {

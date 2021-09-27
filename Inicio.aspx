@@ -74,8 +74,8 @@
 					<div class="col-md-12">
 						<div class="about-tab">
 							<ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
-								<li class="nav-item"><a class="nav-link active" href="#tab_a" data-toggle="tab">Our Mission</a></li>
-								<li class="nav-item"><a class="nav-link" href="#tab_b" data-toggle="tab">Why Us?</a></li>
+								<li class="nav-item"><a class="nav-link active" href="#tab_a" data-toggle="tab"></a></li>
+								<li class="nav-item"><a class="nav-link" href="#tab_b" data-toggle="tab">wadadawdawd</a></li>
 								<li class="nav-item"><a class="nav-link" href="#tab_c" data-toggle="tab">About Us</a></li>								
 							</ul>
 							<div class="tab-content">
