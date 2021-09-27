@@ -36,6 +36,10 @@ html, body{
 	height: 100%;
 }
 
+li #btnsesion{
+    color: white;
+}
+
 body.demos .section {
     background: url(images/bg.png) repeat top center #f2f3f5;
 }

@@ -10,13 +10,15 @@ namespace Baberia
 {
     public partial class Login : System.Web.UI.Page
     {
+        public static Boolean cloadlogin = false;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Index.loadlogin = cloadlogin;
         }
 
         protected void ButtonIniciarSesion_Click(object sender, EventArgs e)
         {
+            
             UsuarioCrud buscar = new UsuarioCrud();
             if (buscar.ComprobarExistencia(TextBoxCorreo.Text) || TextBoxCorreo.Text.Contains("."))
             {
@@ -25,8 +27,8 @@ namespace Baberia
                 if(buscar.ComprobarUsuario(objeto))
                 {
                     Response.Write("<script>alert('BIENVENIDO A ELEGANCE BARBERSHOP');</script>");
-
-
+                    Index.activesesion = true;
+                    Response.Redirect("Inicio.aspx");
                 }
                 else
                 {
@@ -44,6 +46,8 @@ namespace Baberia
                 TextBoxPassword.Text = "";
                 TextBoxCorreo.Focus();
             }
+
+            
                             
         }
     }

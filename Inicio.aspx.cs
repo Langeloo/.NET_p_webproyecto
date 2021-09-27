@@ -11,7 +11,12 @@ namespace Baberia
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Index.loadlogin = true;
+            if (Index.activesesion)
+            {
+                Response.Write("<script>Alert('Sesion iniciada con exito, BIENVENIDO!!!');</script>");
+            }
+            
         }
     }
 }
