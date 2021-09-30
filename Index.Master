@@ -22,7 +22,7 @@
 <body class="barber_version">
    
 
-             <!-- PRELOADER DE LA PAGINA  <div id="preloader">
+             <!--<div id="preloader">
                     <div class="cube-wrapper">
 		              <div class="cube-folding">
 			            <span class="leaf1"></span>
@@ -45,7 +45,7 @@
                 <div class="top-add alert alert-light alert-dismissible">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 		<strong>Acceso con éxito!</strong>
-	</div> -->
+	</div>-->
 
 
 	<header class="top-navbar">
@@ -65,7 +65,7 @@
 						<li class="nav-item"><a class="nav-link" href="Servicios.aspx">Nuestros Servicios</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Contactanos</a></li>
 						<li class="nav-item"><a class="nav-link" href="#">Acerca de nosotros</a></li>
-						<li class="nav-item"><a class="nav-link" href="#" id="Apartar" runat="server">Aparta tú Cita</a></li>
+						<li class="nav-item"><a class="nav-link" href="Apartarcitas.aspx" id="Apartar" runat="server">Aparta tú Cita</a></li>
 						<li class="nav-item"><a class="nav-link" href="#" id="VerCitas" runat="server">Ver Citas agendadas</a></li>
 						<li class="nav-item"><a class="nav-link" href="#" id="Admin" runat="server">Servicios administrador</a></li>
 						<li class="nav-item"><a class="nav-link" href="Login.aspx" id="BtnIniciar" runat="server">Iniciar Sesión</a></li>

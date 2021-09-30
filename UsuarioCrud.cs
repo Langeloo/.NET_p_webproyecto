@@ -112,7 +112,6 @@ namespace Baberia
                 con.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con.conectar());
                 reader = cmd.ExecuteReader();
-                Usuario resultado = new Usuario();
                if (reader.HasRows)
                 {
                     lista.Clear();

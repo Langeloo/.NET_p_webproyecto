@@ -16,7 +16,7 @@
 					<div class="big-tagline text-center">
 						<h2><strong>Elegance Barber Shop</strong><br>
 						es la mejor barbería de la zona</h2>
-						<p class="lead">Escribenos al Whatsapp<br></p>
+						<p class="lead">Escribenos al WhatsApp<br></p>
 						<a href="https://wa.link/uclykk" target="_blank" class="btn btn-light btn-radius btn-brd grd1 effect-1 butn">Click Aquí</a>
 					</div>
 				</div>
@@ -39,7 +39,7 @@
 						<h2><strong>Elegance Barber Shop</strong><br>
 						Colombia, Bogotá</h2>
 						<p class="lead"><br></p>
-						<a href="#" class="btn btn-light btn-radius btn-brd grd1 effect-1 butn"></a>
+						<a href="#" class="btn btn-light btn-radius btn-brd grd1 effect-1 butn">holaaaaaaaaaaaaaaaa</a>
 					</div>
 				</div>
 			</div>
@@ -52,18 +52,20 @@
 				<div class="row align-items-center">
 					<div class="col-md-6 text-left">
 						<div class="message-box">
-							<h4>About</h4>
-							<h2>Welcome to SMBarber</h2>
-							<p class="lead">Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
+							<h4>&nbsp;</h4>
+							<h2>BIENVENIDO A ELEGANCE BARBER SHOP</h2>
+							<p class="lead">¿Por qué elegirnos como su barberia preferida?</p>
 
-							<p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo. </p>
+							<p style="margin: 1em 0px; box-sizing: border-box; padding: 0px; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 400; font-stretch: inherit; font-size: 17px; line-height: 1.41; font-family: &quot;Proxima Nova&quot;, &quot;Helvetica Neue&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline; outline: 0px; color: rgb(51, 51, 51); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+                                Uno de los mayores placeres de acudir a una barbería para recibir una afeitada<strong style="margin: 0px; box-sizing: border-box; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 700; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; outline: 0px;"><span>&nbsp;</span>es el de sentir la toalla húmeda cubrir completamente el rostro</strong>. Esto no se hace sólo porque es muy cool, sino por una razón muy práctica, pues la preparación antes del afeitado húmedo da grandes dividendos en comodidad y en la calidad del afeitado. De todos modos, y más allá de los fines prácticos, el gozo que provoca esta técnica de la toalla húmeda es indescriptible. </br>Pero hay algo importante que es preciso aclarar en este momento. Toda esta nueva movida del aseo y del cuidado de la barba que gana nuevos adeptos día a día no tiene ni por asomo algún parecido con la “metro sexualidad”, una tendencia nacida al amparo de 
+                                ciertas “celebrities” hace algunos años. Muy por el contrario,<span>&nbsp;</span><strong style="margin: 0px; box-sizing: border-box; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 700; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; outline: 0px;">las barberías apuntan a cumplir con las espectativas de los hombres que buscan una buena apariencia todos los días, ELEGANCE BARBER SHOP se espelializa en esto.</strong></p>
 
-							<a href="#services" data-scroll="" class="btn btn-light btn-radius btn-brd grd1 effect-1">Learn More</a>
+							<a href="Servicios.aspx" data-scroll="" class="btn btn-light btn-radius btn-brd grd1 effect-1" runat="server">conocer más</a>
 						</div><!-- end messagebox -->
 					</div><!-- end col -->
 					<div class="col-md-6 text-center">
 						<div class="right-box">
-							<img class="img-fluid" src="uploads/about-img.jpg" alt="" />
+							<img class="img-fluid" src="uploads/barber_service_05.jpg" alt="" />
 						</div>
 					</div><!-- end col -->
 				</div><!-- end row -->
@@ -74,9 +76,9 @@
 					<div class="col-md-12">
 						<div class="about-tab">
 							<ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
-								<li class="nav-item"><a class="nav-link active" href="#tab_a" data-toggle="tab"></a></li>
-								<li class="nav-item"><a class="nav-link" href="#tab_b" data-toggle="tab">wadadawdawd</a></li>
-								<li class="nav-item"><a class="nav-link" href="#tab_c" data-toggle="tab">About Us</a></li>								
+								<li class="nav-item"><a class="nav-link active" href="#tab_a" data-toggle="tab">¿Cuantos años de experiencia tenemos en el negocio?</a></li>
+								<li class="nav-item"><a class="nav-link" href="#tab_b" data-toggle="tab">¿Desde hace cuanto estamos aquí?</a></li>
+								<li class="nav-item"><a class="nav-link" href="#tab_c" data-toggle="tab">¿Que hacemos?</a></li>								
 							</ul>
 							<div class="tab-content">
 								<div class="tab-pane fade show active" id="tab_a">
@@ -86,11 +88,10 @@
 								<div class="tab-pane fade" id="tab_b">
 									<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
 									<ul>
-										<li><i class="fa fa-circle-o" aria-hidden="true"></i>User Experince</li>
-										<li><i class="fa fa-circle-o" aria-hidden="true"></i>Full Devices</li>
-										<li><i class="fa fa-circle-o" aria-hidden="true"></i>Awesome Design</li>
-										<li><i class="fa fa-circle-o" aria-hidden="true"></i>Visual Impact</li>
-										<li><i class="fa fa-circle-o" aria-hidden="true"></i>100% Sincronized</li>
+										<li><i class="fa fa-circle-o" aria-hidden="true"></i>Barberos experimentados</li>
+										<li><i class="fa fa-circle-o" aria-hidden="true"></i>Servicios garantizados</li>
+										<li><i class="fa fa-circle-o" aria-hidden="true"></i>Increibles looks</li>
+										<li><i class="fa fa-circle-o" aria-hidden="true"></i>Estilos radicales para ti</li>
 										<li><i class="fa fa-circle-o" aria-hidden="true"></i>Custom Support</li>
 									</ul>
 								</div>
@@ -114,15 +115,15 @@
 									<img src="uploads/barber_01.jpg" alt="" class="img-responsive img-rounded">
 								</div>
 								<div class="dit-box">
-									<h3>Show us Your Graft Style</h3>
-									<p>Aliquam sagittis ligula et sem lacinia, ut facilisis enim sollicitudin. Proin nisi est, convallis nec purus vitae, iaculis posuere sapien. Cum sociis natoque.</p>
+									<h3>Encuentra tu propio estilo</h3>
+									<p>Nuestra atención especializada hará que tu nueva apariencia sea lo que siempre quisiste ser!</p>
 								</div>
 							</div><!-- end service -->
 							
 							<div class="service-widget">
 								<div class="post-media wow fadeIn">
 									<a href="uploads/barber_02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-									<img src="uploads/barber_02.jpg" alt="" class="img-responsive img-rounded">
+									<img src="uploads/barber_05.jpg" alt="" class="img-responsive img-rounded">
 								</div>
 								<div class="dit-box">
 									<h3>Outstanding Barber Shop</h3>
@@ -152,44 +153,18 @@
 								</div>
 							</div><!-- end service -->
 							
-							<div class="service-widget">
-								<div class="post-media wow fadeIn">
-									<a href="uploads/barber_05.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-									<img src="uploads/barber_05.jpg" alt="" class="img-responsive img-rounded">
-								</div>
-								<div class="dit-box">
-									<h3>The Barber Materials</h3>
-									<p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis posuere.</p>
-								</div>
-							</div><!-- end service -->
-							
-							<div class="service-widget">
-								<div class="post-media wow fadeIn">
-									<a href="uploads/barber_06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-									<img src="uploads/barber_06.jpg" alt="" class="img-responsive img-rounded">
-								</div>
-								<div class="dit-box">
-									<h3>The Barber Materials</h3>
-									<p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis posuere.</p>
-								</div>
-							</div><!-- end service -->
-							
 						</div>
 					</div>
 				</div><!-- end row -->
 			</div><!-- end container -->
 		</div><!-- end section -->
 
-		
-		
-		
 		<div id="barbers" class="section lb">
 			<div class="container">
 				<div class="section-title row text-center">
 					<div class="col-md-8 offset-md-2">
-					    <small>CONOCE NUESTRO EQUIPO DE LOS MEJORES BARBEROS</small>
-					<h3>NUESTROS BARBEROS</h3>
-					</div>
+					    <small>CONOCE NUESTRO EL EQUIPO </small>
+					<h3>LOS MEJORES BARBEROS			</div>
 				</div><!-- end title -->
 
 				<div class="row dev-list text-center">
@@ -201,9 +176,7 @@
 								<div class="social-up-hover">
 									<div class="footer-social">
 										<a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
-										<a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
 										<a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
-										<a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a>
 									</div>
 								</div>
 							</div>
@@ -227,19 +200,17 @@
 								<div class="social-up-hover">
 									<div class="footer-social">
 										<a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
-										<a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
 										<a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
-										<a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a>
 									</div>
 								</div>
 							</div>
 							<div class="team-box">
 								<div class="widget-title">
-									<h3>Bryan Saftler</h3>
-									<small>The Barber</small>
+									<h3>Bryan Salas</h3>
+									<small>Barbero</small>
 								</div>
 								<!-- end title -->
-								<p>Hello guys, I am Soren from Sirbistana. I am senior art director and barber of the Barber Shop Market.</p>
+								<p>Hola soy bryan uno de los baberos especialistas en cortes y delineado, con mucho estilo y experiencia, te daré el mejor look!</p>
 							</div>
 							<div class="t-bottom"></div>
 						</div><!--widget -->
@@ -249,25 +220,22 @@
 						<div class="widget our-inner-taem clearfix">
 							<div class="t-top"></div>
 							<div class="hover-br">
-								<img src="uploads/barber_team_02.jpg" alt="" class="img-responsive">
+								<img src="uploads/barber_06.jpg" alt="" class="img-responsive">
 								<div class="social-up-hover">
 									<div class="footer-social">
 										<a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
-										<a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
 										<a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
-										<a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a>
 									</div>
 								</div>
 							</div>
 							<div class="team-box">
 								<div class="widget-title">
-									<h3>Matthew Bayliss</h3>
-									<small>The Barber</small>
+									<h3>Mateo Cotero</h3>
+									<small>Barbero</small>
 								</div>
 								<!-- end title -->
-								<p>Hello guys, I am Soren from Sirbistana. I am senior art director and barber of the Barber Shop Website.</p>
-							</div>
-							<div class="t-bottom"></div>
+								<p>Hola amigo, soy uno de los barberos de está excelente barbería y espero poder darte el mejor de los cortes de cabello que te hayan hecho, espero que vengas pronto!!! </div>
+								<div class="t-bottom"></div>
 						</div><!--widget -->
 					</div><!-- end col -->
 				</div><!-- end row -->
@@ -278,8 +246,8 @@
 			<div class="container">
 				<div class="section-title row text-center">
 					<div class="col-md-8 offset-md-2">
-						<small>LET'S SEE OUR TESTIMONIALS</small>
-						<h3>HAPPY TESTIMONIALS</h3>
+						<small>!Estos son algunos testimonios de</small>
+						<h3>DE CLIENTES FELICES¡</h3>
 					</div>
 				</div><!-- end title -->
 
@@ -290,11 +258,11 @@
 								<div class="testi-meta">
 									<i class="fa fa-quote-right"></i>
 									<img src="uploads/testi_01.png" alt="" class="img-responsive alignright">
-									<h4>James Fernando <small>- Manager of Racer</small></h4>
+									<h4>James Fernando <small>- Cliente de hace 5 años</small></h4>
 								</div>
 								<div class="desc">
-									<h3>Wonderful Support!</h3>
-									<p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
+									<h3>Un servicio excelente</h3>
+									<p class="lead">Llevo cortandome aquí el cabello desde el año 2016 y no me arrepiento de venir cada vez que necesito un gran cambio de apariencia.</p>
 								</div>
 								<!-- end testi-meta -->
 							</div>
@@ -303,11 +271,11 @@
 								<div class="testi-meta">
 									<i class="fa fa-quote-right"></i>
 									<img src="uploads/testi_02.png" alt="" class="img-responsive alignright">
-									<h4>Jacques Philips <small>- Designer</small></h4>
+									<h4>José Varon<small>- Designer</small></h4>
 								</div>
 								<div class="desc">
-									<h3>Awesome Services!</h3>
-									<p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
+									<h3>Increibles cortes de cabbelo</h3>
+									<p class="lead">La primera vez que vine, no estaba seguro, ya que nuestra apariencia depende mucho de nuestro cabello, pero cuando el barbero comenzó su trabajo no tuve más nervios.</p>
 								</div>
 								<!-- end testi-meta -->
 							</div>
@@ -316,24 +284,11 @@
 								<div class="testi-meta">
 									<i class="fa fa-quote-right"></i>
 									<img src="uploads/testi_03.png" alt="" class="img-responsive alignright">
-									<h4>Venanda Mercy <small>- Newyork City</small></h4>
+									<h4>Alexandra Castaño<small>Cliente nueva</small></h4>
 								</div>
 								<div class="desc">
-									<h3>Great & Talented Team!</h3>
-									<p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-								</div>
-								<!-- end testi-meta -->
-							</div>
-							<!-- end testimonial -->
-							<div class="testimonial clearfix">
-								<div class="testi-meta">
-									<i class="fa fa-quote-right"></i>
-									<img src="uploads/testi_03.png" alt="" class="img-responsive alignright">
-									<h4>Venanda Mercy <small>- Newyork City</small></h4>
-								</div>
-								<div class="desc">
-									<h3> Great & Talented Team!</h3>
-									<p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
+									<h3>Que gran talento y estilo!</h3>
+									<p class="lead">Apezar de ser una barbería el servicio para mujeres es excelente, me realice uno se los servicios de tintura en el cabello y me quedo hermosooooo!!</p>
 								</div>
 								<!-- end testi-meta -->
 							</div>

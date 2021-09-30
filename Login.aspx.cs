@@ -25,10 +25,9 @@ namespace Baberia
                 if (buscar.ComprobarUsuario(objeto))
                 {
                     Index.estadosesion = true;
-
-
-                    Response.Write("<script>alert('BIENVENIDO A ELEGANCE BARBERSHOP');</script>");
-
+                    Index.Sesion = 1;
+                    Index.user = buscar.BuscarUsuario(objeto);
+                    Response.Write("<script>alert('BIENVENIDO A ELEGANCE BARBERSHOP "+Index.user.getNombre1()+"');</script>");
                     Usuario ob = buscar.BuscarUsuario(objeto);
                     if (ob.getRol().Equals("Barbero"))
                     {

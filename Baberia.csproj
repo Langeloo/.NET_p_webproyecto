@@ -70,6 +70,7 @@
   <ItemGroup>
     <Content Include="AcercaDeNosotros.aspx" />
     <Content Include="Cerrar.aspx" />
+    <Content Include="citasCliente.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="pruebas.aspx" />
@@ -91,6 +92,13 @@
     </Compile>
     <Compile Include="Cerrar.aspx.designer.cs">
       <DependentUpon>Cerrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="citasCliente.aspx.cs">
+      <DependentUpon>citasCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="citasCliente.aspx.designer.cs">
+      <DependentUpon>citasCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="Index.Master.cs">

@@ -12,6 +12,8 @@ namespace Baberia
         public static bool estadosesion= false;
         public static bool enlogin= false;
         public static char roLin;
+        public static Usuario user = new Usuario();
+        public static int Sesion;
         protected void Page_Load(object sender, EventArgs e)
         {
             if(estadosesion)
