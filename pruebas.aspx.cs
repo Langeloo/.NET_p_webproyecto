@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -17,31 +18,65 @@ namespace Baberia
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Usuario ob = new Usuario("Administraaaador@gmAIl.com", "12345678", "CARLOOOOOSSSS", "Santiago", "Lopez", "Diaz", "Barbero", 32);
-            UsuarioCrud ini = new UsuarioCrud();
-            //bool uwu = ini.InsertarUsuario(ob);
-            /*TextBox1.Text += "INSERT INTO USUARIO (correo,password,nombre1,nombre2,apellido1,apellido2,rol,edad) " +
-                "VALUES ('" + ob.getCorreo() + "'," +
-                        "'" + ob.getPassword() + "'," +
-                        "'" + ob.getNombre1() + "'," +
-                        "'" + ob.getNombre2() + "'," +
-                        "'" + ob.getApellido1() + "'" +
-                        "'" + ob.getApellido2() + "'," +
-                        "'" + ob.getRol() + "'," +
-                         + ob.getEdad() + ");" + uwu;*/
+            //Usuario ob = new Usuario("LuzAdrua11@gmAIl.com", "12345678", "Carla", "", "Lopez", "Diaz", "Usuario", 18);
+           /* Usuario ob = new Usuario("Toto@gmail.com", "12345678", "Carla", "", "Lopez", "Diaz", "Usuario", 18);
+            UsuarioCrud ini = new UsuarioCrud();*/
+           /* Usuario ob2 = ini.BuscarUsuario(ob);
+            if (ob2 != null)
+            {
+                TextBox1.Text += ob2.getCorreo() + "  " + ob2.getNombre1();
+            } else
+            {
+                TextBox1.Text += "Usuario no encontrado ";
+            }*/
+            
 
-            if(ini.delete(ob))
+            
+
+            /*if (o.conectar()!=null)
             {
-                List<Usuario> lista = ini.listaDeUsuarios();
-                foreach (Usuario u in lista)
+                
+            }else
+            {
+                
+            }
+            */
+            
+            
+            CrudCita cliente = new CrudCita();
+            CrudBarbero barb = new CrudBarbero();
+            List<Cita> lista = cliente.listaDeUsuarios();
+            if (lista != null)
                 {
-                    TextBox1.Text += u.getNombre1()+ "\n";
+
+                    foreach (Cita u in lista)
+                    {
+
+
+                    if (u.getCorreobarbero().Equals("Edwin@gmail.com") && u.getCorreocliente().Equals("Cliente@gmail.com"))
+                    {
+                       if (u.getHora().Equals("11:00:00") && u.getFecha().Equals("03/10/2021"))
+                        {
+                            TextBox1.Text += u.getCorreobarbero() + "\n" + u.getHora();
+                            break;
+                        }
+                            
+                        
+                        
+                    }
+                    
+                        
+
+                    }
                 }
-            }
-            else
-            {
-                TextBox1.Text += "NO SE HIZO NI MIERDA ERROR";
-            }
+                else
+                {
+                    TextBox1.Text += "NO SE HIZO NI MIERDA ERROR";
+                }
+          
+            
+            
+
 
             
 

@@ -36,6 +36,7 @@ namespace Baberia
                         }
                     case 'u':
                         {
+                            Apartar.HRef = "citasCliente.aspx";
                             Apartar.Visible = true;
                             Admin.Visible = false;
                             VerCitas.Visible = false;
@@ -58,6 +59,7 @@ namespace Baberia
             }
             else
             {
+                Apartar.HRef = "Login.aspx";
                 BtnCerrarS.Visible = false;
                 Admin.Visible = false;
                 VerCitas.Visible = false;

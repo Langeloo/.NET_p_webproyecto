@@ -18,7 +18,7 @@ namespace Baberia
         protected void ButtonIniciarSesion_Click(object sender, EventArgs e)
         {
             UsuarioCrud buscar = new UsuarioCrud();
-            if (buscar.ComprobarExistencia(TextBoxCorreo.Text) || TextBoxCorreo.Text.Contains("."))
+            if (buscar.ComprobarExistencia(TextBoxCorreo.Text))
             {
                 Usuario objeto = new Usuario(TextBoxCorreo.Text,TextBoxPassword.Text,"","","","","",0);
 
@@ -27,14 +27,15 @@ namespace Baberia
                     Index.estadosesion = true;
                     Index.Sesion = 1;
                     Index.user = buscar.BuscarUsuario(objeto);
-                    Response.Write("<script>alert('BIENVENIDO A ELEGANCE BARBERSHOP "+Index.user.getNombre1()+"');</script>");
                     Usuario ob = buscar.BuscarUsuario(objeto);
                     if (ob.getRol().Equals("Barbero"))
                     {
                         Index.roLin = 'b';
+
                     }else if(ob.getRol().Equals("Usuario"))
                     {
                         Index.roLin = 'u';
+
                     }
                     else if(ob.getRol().Equals("Administrador"))
                     {

@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -16,7 +17,7 @@ namespace Baberia
         public Boolean InsertarUsuario(Usuario ob)
         {
             Conexion con = new Conexion();
-            MySqlDataReader reader = null;
+            SqlDataReader reader = null;
             String sql = "INSERT INTO USUARIO (correo,password,nombre1,nombre2,apellido1,apellido2,rol,edad) " +
                 "VALUES ('"+ob.getCorreo()+"'," +
                         "'"+ob.getPassword()+"'," +
@@ -30,11 +31,11 @@ namespace Baberia
             try
             {
                 con.conectar();
-                MySqlCommand cmd = new MySqlCommand(sql , con.conectar());
+                SqlCommand cmd = new SqlCommand(sql , con.conectar());
                 cmd.ExecuteNonQuery();
                 return true;
             }
-            catch (MySqlException oe)
+            catch (SqlException oe)
             {
                 Console.WriteLine("Error en el insertar datos" + oe);
                 return false;
@@ -48,17 +49,17 @@ namespace Baberia
         public Boolean delete(Usuario ob)
         {
             Conexion con = new Conexion();
-            MySqlDataReader reader = null;
+            SqlDataReader reader = null;
             String sql = "DELETE FROM USUARIO WHERE CORREO='" + ob.getCorreo() + "';";
 
             try
             {
                 con.conectar();
-                MySqlCommand cmd = new MySqlCommand(sql, con.conectar());
+                SqlCommand cmd = new SqlCommand(sql, con.conectar());
                 cmd.ExecuteNonQuery();
                 return true;
             }
-            catch (MySqlException oe)
+            catch (SqlException oe)
             {
                 Console.WriteLine("Error en BORRAR datos" + oe);
                 return false;
@@ -74,7 +75,7 @@ namespace Baberia
         public Boolean Update(String id,Usuario ob)
         {
             Conexion con = new Conexion();
-            MySqlDataReader reader = null;
+            SqlDataReader reader = null;
             String sql = "UPDATE USUARIO SET correo ='" + ob.getCorreo() + "',password='" + ob.getPassword() + "',nombre1='" + ob.getNombre1()
                                                 + "',nombre2='" + ob.getNombre2() + "',apellido1='" + ob.getApellido1() + "',apellido2='" + ob.getApellido2() + "',rol='" + ob.getRol() + "',edad='" + ob.getEdad() + "'" +
                                                 "WHERE CORREO='" + id + "';";
@@ -82,11 +83,11 @@ namespace Baberia
             try
             {
                 con.conectar();
-                MySqlCommand cmd = new MySqlCommand(sql, con.conectar());
+                SqlCommand cmd = new SqlCommand(sql, con.conectar());
                 cmd.ExecuteNonQuery();
                 return true;
             }
-            catch (MySqlException oe)
+            catch (SqlException oe)
             {
                 Console.WriteLine("Error en el insertar datos" + oe);
                 return false;
@@ -104,13 +105,13 @@ namespace Baberia
             
             List<Usuario> lista = new List<Usuario>();
             Conexion con = new Conexion();
-            MySqlDataReader reader = null;
+            SqlDataReader reader = null;
             String sql = "SELECT * FROM USUARIO;";
 
             try
             {
                 con.conectar();
-                MySqlCommand cmd = new MySqlCommand(sql, con.conectar());
+                SqlCommand cmd = new SqlCommand(sql, con.conectar());
                 reader = cmd.ExecuteReader();
                if (reader.HasRows)
                 {
@@ -128,7 +129,6 @@ namespace Baberia
                         ob.setEdad(reader.GetInt32(7));
                         lista.Add(ob);
                     }
-
                     return lista;
                 }
                 else
@@ -137,7 +137,7 @@ namespace Baberia
                 }
 
             }
-            catch (MySqlException oe)
+            catch (SqlException oe)
             {
                 Console.WriteLine("Error en la lista de los usuarios" + oe);
                 return null;
@@ -153,14 +153,14 @@ namespace Baberia
         public Usuario BuscarUsuario(Usuario id)
         {
             Conexion con = new Conexion();
-            MySqlDataReader reader = null;
+            SqlDataReader reader = null;
             String sql = "SELECT * FROM USUARIO WHERE CORREO = '"+ id.getCorreo()+ "';";
             Usuario ob = null;
             try
             {
                 con.conectar();
                 
-                MySqlCommand cmd = new MySqlCommand(sql, con.conectar());
+                SqlCommand cmd = new SqlCommand(sql, con.conectar());
                 reader = cmd.ExecuteReader();
                 
                     ob = new Usuario();
@@ -178,10 +178,10 @@ namespace Baberia
                     }
                 return ob;
             }
-            catch(MySqlException oe)
+            catch(SqlException oe)
             {
                 Console.WriteLine("Error en el buscar usuario"+ oe);
-                return ob;
+                return null;
             }
             finally
             {

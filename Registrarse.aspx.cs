@@ -40,6 +40,30 @@ namespace Baberia
                 UsuarioCrud insertar = new UsuarioCrud();
                 if (insertar.InsertarUsuario(ob))
                 {
+                    if (ob.getRol().Equals("Barbero"))
+                    {
+                        
+                         Barbero bar = new Barbero();
+                         bar.setCorreo(ob.getCorreo());
+                         bar.setNombres(ob.getNombre1() + " " + ob.getNombre2());
+                         bar.setApellidos(ob.getApellido1() + " " + ob.getApellido2());
+                         bar.setEdad(ob.getEdad());
+                         CrudBarbero n = new CrudBarbero();
+                         n.InsertarUsuario(bar);
+
+                    }
+                    else if (ob.getRol().Equals("Usuario"))
+                    {
+                        Cliente bar = new Cliente();
+                        bar.setCorreo(ob.getCorreo());
+                        bar.setNombres(ob.getNombre1() + " " + ob.getNombre2());
+                        bar.setApellidos(ob.getApellido1() + " " + ob.getApellido2());
+                        bar.setEdad(ob.getEdad());
+                        CrudCliente n = new CrudCliente();
+                        n.InsertarUsuario(bar);
+
+                    }
+                    
                     insertar.InsertarUsuario(ob);
                     Response.Write("<script>alert('Datos Registrados con éxito');</script>");
                     Response.Redirect("Login.aspx");

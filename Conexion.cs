@@ -10,17 +10,24 @@ namespace Baberia
 {
     public class Conexion
     {
-        public MySqlConnection em;
+        public SqlConnection em;
 
         public Conexion()
         {
         }
 
-        public MySqlConnection conectar()
+        public SqlConnection conectar()
         {
-                em = new MySqlConnection("server=localhost;port=3306;user id=root;password=;database=barberia");
+            try
+            {
+                em = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Public\\Bases de datos\\Barberia.mdf;Integrated Security=True;Connect Timeout=30");
                 em.Open();
                 return em;
+            }catch(SqlException oe)
+            {
+                return null;
+            }
+                
         }
            
         public void Cerrar()

@@ -86,6 +86,7 @@
     <Compile Include="AcercaDeNosotros.aspx.designer.cs">
       <DependentUpon>AcercaDeNosotros.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Barbero.cs" />
     <Compile Include="Cerrar.aspx.cs">
       <DependentUpon>Cerrar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -93,6 +94,7 @@
     <Compile Include="Cerrar.aspx.designer.cs">
       <DependentUpon>Cerrar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cita.cs" />
     <Compile Include="citasCliente.aspx.cs">
       <DependentUpon>citasCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -100,7 +102,11 @@
     <Compile Include="citasCliente.aspx.designer.cs">
       <DependentUpon>citasCliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cliente.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="CrudBarbero.cs" />
+    <Compile Include="CrudCita.cs" />
+    <Compile Include="CrudCliente.cs" />
     <Compile Include="Index.Master.cs">
       <DependentUpon>Index.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
